@@ -70,7 +70,7 @@ export default {
         request({
           url: 'login',
           method: 'post',
-          params: this.loginForm
+          data: this.loginForm
         })
           .then(res => {
             // console.log(res)
