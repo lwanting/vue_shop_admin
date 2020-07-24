@@ -33,7 +33,7 @@
               <span>{{item.authName}}</span>
             </template>
             <!-- 二级菜单 -->
-            <el-menu-item :index="'/' + item.path" v-for="subItem in item.children" :key="subItem.id">
+            <el-menu-item :index="'/' + subItem.path" v-for="subItem in item.children" :key="subItem.id">
               <!-- 二级菜单模板 -->
               <template slot="title">
                 <!-- 图标 -->
