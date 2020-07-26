@@ -1,5 +1,6 @@
 import Vue from 'vue'
-import { Button, Message, Form, FormItem, Input, Header, Container, Aside, Main, Menu, Submenu, MenuItem, Breadcrumb, BreadcrumbItem, Card, Row, Col, Table, TableColumn, Switch, Tooltip, Pagination, Dialog, MessageBox, Tag, Tree, Select, Option } from 'element-ui'
+import ZkTable from 'vue-table-with-tree-grid'
+import { Button, Message, Form, FormItem, Input, Header, Container, Aside, Main, Menu, Submenu, MenuItem, Breadcrumb, BreadcrumbItem, Card, Row, Col, Table, TableColumn, Switch, Tooltip, Pagination, Dialog, MessageBox, Tag, Tree, Select, Option, Cascader, Alert, Tabs, TabPane } from 'element-ui'
 
 Vue.use(Button)
 Vue.use(Form)
@@ -27,6 +28,12 @@ Vue.use(Tag)
 Vue.use(Tree)
 Vue.use(Select)
 Vue.use(Option)
+Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
 // 挂载到原型上
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
+// 表格树组件
+Vue.use(ZkTable)

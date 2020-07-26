@@ -71,7 +71,7 @@
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
         :current-page="queryInfo.pagenum"
-        :page-sizes="[5, 3, 2]"
+        :page-sizes="[2, 3, 5]"
         :page-size="queryInfo.pagesize"
         layout="total, sizes, prev, pager, next, jumper"
         :total="total"
@@ -176,7 +176,7 @@ export default {
       queryInfo: {
         query: '',
         pagenum: 1,
-        pagesize: 4
+        pagesize: 2
       },
       userList: [],
       total: 0,
