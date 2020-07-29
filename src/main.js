@@ -16,6 +16,18 @@ import 'quill/dist/quill.bubble.css' // for bubble theme
 Vue.config.productionTip = false
 Vue.use(VueQuillEditor)
 
+// 时间过滤器
+Vue.filter('dateFormat', originVal => {
+  // 转成毫秒
+  const dt = new Date(originVal * 1000)
+  const year = dt.getFullYear()
+  const month = (dt.getMonth() + 1 + '').padStart(2, '0')
+  const day = (dt.getDate() + '').padStart(2, '0')
+  const h = (dt.getHours() + '').padStart(2, '0')
+  const m = (dt.getMinutes() + '').padStart(2, '0')
+  const s = (dt.getSeconds() + '').padStart(2, '0')
+  return `${year}-${month}-${day} ${h}:${m}:${s}`
+})
 new Vue({
   router,
   render: h => h(App)
